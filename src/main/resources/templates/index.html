@@ -31,11 +31,22 @@ function onVrViewLoad() {
     height : 450 ,
     width : 800
   });
+  vrView.addHotspot('dining-room', {
+	  pitch: 30, // In degrees. Up is positive.
+	  yaw: 20, // In degrees. To the right is positive.
+	  radius: 0.05, // Radius of the circular target in meters.
+	  distance: 2 // Distance of target from camera in meters.
+	});
+  vrView.on('click', function(event) {
+// 	  alert(event.id)
+	});
+  
 }
 </script>
 
 
 
 API : https://developers.google.com/vr/discover/360-degree-media
+HOTSPOT : https://googlevr.github.io/vrview/examples/hotspots/index.html
 </body>
 </html>
